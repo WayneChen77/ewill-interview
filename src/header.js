@@ -39,6 +39,10 @@ const Header = () => {
           </ol>
         </div>
       </div>
+      <div className="header-food">
+        <img src={require("./icons/海浪.png")} alt="" />
+        <img src={require("./icons/海浪.png")} alt="" />
+      </div>
     </div>
   );
 };

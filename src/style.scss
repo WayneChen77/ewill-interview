@@ -12,14 +12,14 @@ body {
     align-items: center;
     text-align: center;
     height: 634px;
-    padding: 60px 24px 8px;
+    padding: 60px 0px 8px;
     gap: 32px;
     //參考?
-    position: absolute;
-    height: 634px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
+    // position: absolute;
+    // height: 634px;
+    // left: 0px;
+    // right: 0px;
+    // top: 0px;
 
     .txtandbtn {
       color: white;
@@ -45,7 +45,6 @@ body {
         background: #b57556;
         box-shadow: 0px 0px 20px rgba(250, 163, 163, 0.91);
         border-radius: 50px;
-        border: none;
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
@@ -53,6 +52,10 @@ body {
         color: white;
         letter-spacing: 0.2em;
         margin-top: 36px;
+        border: none;
+        &:active {
+          border: 3px solid #74584a;
+        }
       }
     }
     .content {
@@ -90,6 +93,82 @@ body {
       .con2 ol li:first-child strong {
         text-decoration: underline;
       }
+    }
+  }
+  .header-food {
+    display: flex;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+//lottery
+.lottery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px 58px;
+  margin-top: 57px;
+  gap: 40px;
+  background: rgba(226, 217, 211, 1);
+  height: 813px;
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+    width: 808px;
+    height: 575px;
+    background: #ffffff;
+    border: 2px solid #b57556;
+    box-shadow: 0px 1px 20px rgba(73, 72, 72, 0.25);
+    border-radius: 16px;
+    margin: auto;
+    form {
+      width: 100%;
+      height: 100%;
+      label {
+        display: block;
+        width: 38px;
+        height: 22px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #204379;
+        position: relative;
+        &::after {
+          content: "*";
+          color: red;
+          position: absolute;
+          margin-left: 4px;
+          top: -3px;
+        }
+      }
+      input {
+        width: 95%;
+        background: #ffffff;
+        border: 1px solid #204379;
+        border-radius: 20px;
+        height: 10%;
+
+        margin: 0.5rem 0 1rem 0;
+      }
+    }
+  }
+  button {
+    width: 15%;
+    height: 57px;
+    background: #b57556;
+    box-shadow: 0px 4px 10px rgba(40, 35, 35, 0.35),
+      0px -4px 10px rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    border: none;
+    &:active {
+      border: 3px solid #74584a;
     }
   }
 }
