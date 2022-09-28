@@ -114,7 +114,6 @@ body .header-food img {
   padding: 40px 20px;
   gap: 20px;
   width: 808px;
-  height: 575px;
   background: #ffffff;
   border: 2px solid #b57556;
   box-shadow: 0px 1px 20px rgba(73, 72, 72, 0.25);
@@ -143,7 +142,8 @@ body .header-food img {
   margin-left: 4px;
   top: -3px;
 }
-.lottery .form form input {
+.lottery .form form input,
+.lottery .form form select {
   width: 95%;
   background: #ffffff;
   border: 1px solid #204379;
@@ -152,9 +152,9 @@ body .header-food img {
   padding: 16px;
   margin: 0.5rem 0 1rem 0;
 }
-.lottery button {
+.lottery .submit {
   width: 20%;
-  height: 57px;
+  min-height: 57px;
   background: #b57556;
   box-shadow: 0px 4px 10px rgba(40, 35, 35, 0.35), 0px -4px 10px rgba(255, 255, 255, 0.9);
   border-radius: 50px;
@@ -163,8 +163,49 @@ body .header-food img {
   font-size: 18px;
   letter-spacing: 0.2em;
   line-height: 125%;
-  color: #ffffff;
 }
-.lottery button:active {
+.lottery .submit .success {
+  display: none;
+  vertical-align: bottom;
+  transform: translateX(-50%);
+  color: #e6ffb1;
+}
+.lottery .submit .failure {
+  display: none;
+  vertical-align: bottom;
+  color: #ffe3e3;
+  transform: rotate(-45deg);
+  transform: translateX(-150%);
+}
+.lottery .setsubmit {
+  color: #e6ffb1;
+}
+.lottery .setsubmit .success {
+  display: inline;
+}
+.lottery .setfailure {
+  color: #ffe3e3;
+}
+.lottery .setfailure .failure {
+  display: inline;
+}
+.lottery .failuremsg {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #e06d6d;
+}
+.lottery .successmsg {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #7886dc;
+}
+.lottery .succes:active {
   border: 3px solid #74584a;
+}
+.lottery .disabled {
+  opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

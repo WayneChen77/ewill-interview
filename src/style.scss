@@ -121,7 +121,7 @@ body {
     padding: 40px 20px;
     gap: 20px;
     width: 808px;
-    height: 575px;
+    // height: 575px;
     background: #ffffff;
     border: 2px solid #b57556;
     box-shadow: 0px 1px 20px rgba(73, 72, 72, 0.25);
@@ -148,7 +148,8 @@ body {
           top: -3px;
         }
       }
-      input {
+      input,
+      select {
         width: 95%;
         background: #ffffff;
         border: 1px solid #204379;
@@ -159,9 +160,9 @@ body {
       }
     }
   }
-  button {
+  .submit {
     width: 20%;
-    height: 57px;
+    min-height: 57px;
     background: #b57556;
     box-shadow: 0px 4px 10px rgba(40, 35, 35, 0.35),
       0px -4px 10px rgba(255, 255, 255, 0.9);
@@ -171,9 +172,54 @@ body {
     font-size: 18px;
     letter-spacing: 0.2em;
     line-height: 125%;
-    color: #ffffff;
+
+    .success {
+      display: none;
+      vertical-align: bottom;
+      transform: translateX(-50%);
+      color: #e6ffb1;
+    }
+    .failure {
+      display: none;
+      vertical-align: bottom;
+      color: #ffe3e3;
+      transform: rotate(-45deg);
+      transform: translateX(-150%);
+    }
+  }
+  .setsubmit {
+    color: #e6ffb1;
+    .success {
+      display: inline;
+    }
+  }
+  .setfailure {
+    color: #ffe3e3;
+    .failure {
+      display: inline;
+    }
+  }
+  .failuremsg {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #e06d6d;
+  }
+  .successmsg {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #7886dc;
+  }
+  .succes {
     &:active {
       border: 3px solid #74584a;
     }
+  }
+  .disabled {
+    opacity: 0.7;
   }
 }
