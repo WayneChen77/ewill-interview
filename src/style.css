@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -102,7 +103,7 @@ body .header-food img {
   flex-direction: column;
   align-items: center;
   padding: 40px 24px 58px;
-  margin-top: 57px;
+  margin-top: 40px;
   gap: 40px;
   background: rgb(226, 217, 211);
   height: 813px;
@@ -208,4 +209,85 @@ body .header-food img {
 }
 .lottery .disabled {
   opacity: 0.7;
+}
+
+.Gift {
+  background: rgb(226, 217, 211);
+  background-image: url("./icons/抽獎沙子.png");
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  gap: 40px;
+}
+.Gift .background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20%;
+}
+.Gift .background .giftitem {
+  width: 178px;
+  height: 145px;
+  position: relative;
+  margin: 10px;
+}
+.Gift .background .giftitem .giftbottom {
+  position: absolute;
+  width: 178px;
+  height: 108px;
+  left: 0px;
+  top: 24px;
+  background: #ffffff;
+  box-shadow: 0px 8px 0px #edeef0;
+  border-radius: 20px;
+}
+.Gift .background .giftitem .giftlabel {
+  position: absolute;
+  left: 31.46%;
+}
+.Gift .background .giftitem .giftlabel p {
+  position: absolute;
+  width: 11px;
+  height: 21px;
+  left: 27px;
+  top: 23px;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16.916px;
+  line-height: 125%;
+  /* or 21px */
+  text-align: center;
+  color: white;
+}
+.Gift .background .giftitem .giftright {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 3px 10px;
+  gap: 10px;
+  position: absolute;
+  width: 46px;
+  height: 26px;
+  left: 125px;
+  top: 42px;
+  background: #fafafa;
+  border: 1px solid #b3b960;
+  border-radius: 50px;
+  color: #b3b960;
+}
+.Gift .background .giftitem .gifttxt {
+  position: absolute;
+  top: 68%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  width: 100%;
+  text-align: center;
+  color: #b3b960;
 }/*# sourceMappingURL=style.css.map */
