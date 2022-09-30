@@ -52,16 +52,33 @@ const Gift = () => {
       color: "silver",
     },
   ];
-  console.log(giftdata);
 
   return (
     <div className="Gift">
       <div className="background">
         {giftdata.map((data) => (
-          <div className="giftitem">
+          <div
+            key={data.lavel}
+            className={
+              data.color === "gold" ? "giftitem gold" : "giftitem silver"
+            }
+          >
             <div className="giftbottom" />
             <div className="giftlabel">
-              <img src={require("./icons/certificateA.png")} alt="" />
+              {data.color === "gold" && (
+                <img
+                  src={require("./icons/certificateA.png")}
+                  alt="picgiftgold"
+                />
+              )}
+
+              {data.color === "silver" && (
+                <img
+                  src={require("./icons/certificateD.png")}
+                  alt="picgiftsilver"
+                />
+              )}
+
               <p>{data.lavel}</p>
             </div>
             <div className="giftright">

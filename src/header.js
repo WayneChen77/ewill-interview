@@ -3,10 +3,14 @@ import React from "react";
 const Header = () => {
   return (
     <div className="header">
+      {/* <img id="wave" src={require("./icons/wave.png")} alt="wave" /> */}
+      <img id="wave2" src={require("./icons/wave2.png")} alt="wave2" />
       <div className="txtandbtn">
         <h1>There is no one</h1>
         <p>who loves pain</p>
-        <button className="btn">FORM</button>
+        <div className="btn">
+          <a href="#lotteryform">FORM</a>
+        </div>
       </div>
 
       <div className="content">
@@ -20,6 +24,10 @@ const Header = () => {
           </ol>
         </div>
         <div className="con2 con">
+          <div className="bubblesup">
+            <div className="bubble" />
+            <img src={require("./icons/sup.png")} alt="sup" />
+          </div>
           <h3>parapraph</h3>
           <ol>
             <li>
@@ -37,11 +45,12 @@ const Header = () => {
               <strong>vitae leo venenatis ullamcorper.</strong>
             </li>
           </ol>
+          <div className="firesup" />
         </div>
       </div>
       <div className="header-food">
-        <img src={require("./icons/海浪.png")} alt="" />
-        <img src={require("./icons/海浪.png")} alt="" />
+        <img src={require("./icons/wavess.png")} alt="" />
+        {/* <img src={require("./icons/waves.png")} alt="" /> */}
       </div>
     </div>
   );

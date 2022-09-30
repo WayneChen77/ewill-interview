@@ -41,7 +41,7 @@ const Lottery = () => {
 
   return (
     <div className="lottery">
-      <div className="form">
+      <div id="lotteryform" className="form">
         <form action="" id="myForm" onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="store">store</label>
           <input
