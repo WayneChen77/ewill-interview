@@ -5,6 +5,11 @@ const Header = () => {
     <div className="header">
       {/* <img id="wave" src={require("./icons/wave.png")} alt="wave" /> */}
       <img id="wave2" src={require("./icons/wave2.png")} alt="wave2" />
+      {/* animail */}
+      <div className="turtle">
+        <img src={require("./icons/turt11.png")} alt="turt" />
+      </div>
+      {/* animail */}
       <div className="txtandbtn">
         <h1>There is no one</h1>
         <p>who loves pain</p>

@@ -16,6 +16,100 @@ body {
       top: 35px;
       position: absolute;
     }
+    .turtle {
+      position: absolute;
+      animation-name: turtle;
+      animation-duration: 24s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      @keyframes turtle {
+        0% {
+          right: 0;
+        }
+        10% {
+          transform: rotate(-10deg);
+        }
+        20% {
+          transform: rotate(-20deg);
+        }
+        30% {
+          transform: rotate(-10deg);
+        }
+        40% {
+          transform: rotate(-20deg);
+        }
+        50% {
+          transform: rotate(-10deg);
+        }
+        60% {
+          transform: rotate(-20deg);
+        }
+        70% {
+          transform: rotate(-10deg);
+        }
+        80% {
+          transform: rotate(-20deg);
+        }
+        90% {
+          transform: rotate(-10deg);
+        }
+
+        100% {
+          right: 100%;
+          transform: rotate(-20deg);
+        }
+      }
+      &::before {
+        content: "";
+        background-image: url("./icons/firstleg.svg");
+        display: block;
+        position: absolute;
+        width: 12px;
+        height: 25px;
+        left: 20%;
+        bottom: 16%;
+        animation-name: firstleg;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        @keyframes firstleg {
+          0% {
+            transform: rotate(30deg);
+          }
+          50% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(30deg);
+          }
+        }
+      }
+      &::after {
+        content: "";
+        background-image: url("./icons/secondleg.svg");
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 19px;
+        bottom: 3%;
+        right: 30%;
+        animation-name: secondleg;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        @keyframes secondleg {
+          0% {
+            transform: rotate(30deg);
+          }
+          50% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(30deg);
+          }
+        }
+      }
+    }
     background-color: #204379;
     display: flex;
     flex-direction: column;
@@ -94,6 +188,7 @@ body {
         position: absolute;
         top: -10%;
         right: -3%;
+
         &::before {
           content: "";
           background-image: url("./icons/fin.svg");
@@ -103,31 +198,100 @@ body {
           height: 46px;
           right: -3px;
           bottom: 14px;
+          & {
+            animation-name: fin;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+          }
+          @keyframes fin {
+            0% {
+              transform: rotate(20deg);
+            }
+            100% {
+              transform: rotate(0deg);
+            }
+          }
         }
+
+        //bubblesupanimation
+        & {
+          animation-name: bubblesup;
+          animation-duration: 24s;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+        }
+        @keyframes bubblesup {
+          0% {
+            right: -3%;
+          }
+          35% {
+            right: 85%;
+            transform: rotate(0deg);
+          }
+
+          50% {
+            right: 95%;
+            transform: rotate(180deg);
+          }
+          85% {
+            transform: rotate(180deg);
+          }
+          100% {
+            right: -3%;
+          }
+        }
+
         .bubble {
           position: absolute;
-          top: 0%;
+          // top: 0%;
           right: 45%;
 
           &::before {
-            content: "";
-            background-image: url("./icons/lbubble.svg");
-            display: block;
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            top: -30px;
-            right: -10px;
-          }
-          &::after {
             content: "";
             background-image: url("./icons/sbubble.svg");
             display: block;
             position: absolute;
             width: 12px;
             height: 12px;
+            top: -30px;
+            right: 3px;
+          }
+          &::after {
+            content: "";
+            background-image: url("./icons/lbubble.svg");
+            display: block;
+            position: absolute;
+
+            width: 20px;
+            height: 20px;
             top: -50px;
             right: -15px;
+          }
+        }
+
+        //bubbleanimation
+        .bubble {
+          animation-name: bubble;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+        }
+        @keyframes bubble {
+          0% {
+            transform: scale(0%);
+            top: 0%;
+          }
+          50% {
+            top: -25%;
+          }
+          75% {
+            opacity: 0.7;
+            transform: scale(100%);
+          }
+          100% {
+            opacity: 0;
+            top: -75%;
           }
         }
       }
@@ -145,6 +309,27 @@ body {
           position: absolute;
           bottom: -45px;
           left: -35px;
+          animation-name: fire;
+          animation-duration: 6s;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          @keyframes fire {
+            0% {
+              transform: scale(10%);
+              bottom: 0px;
+            }
+            50% {
+              bottom: 100px;
+            }
+            75% {
+              opacity: 0.7;
+              transform: scale(200%);
+            }
+            100% {
+              opacity: 0;
+              bottom: 100px;
+            }
+          }
         }
         &::after {
           content: "";
@@ -244,6 +429,61 @@ body {
     box-shadow: 0px 1px 20px rgba(73, 72, 72, 0.25);
     border-radius: 16px;
     margin: auto;
+    position: relative;
+    .formtag {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      gap: 20px;
+      position: absolute;
+      width: 123px;
+      height: 43px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -4%;
+      color: #b57556;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 125%;
+      .turtle {
+        position: absolute;
+        right: -35%;
+        top: -45%;
+        &::before {
+          content: "";
+          background-image: url("./icons/firstleg.svg");
+          display: block;
+          position: absolute;
+          width: 12px;
+          height: 25px;
+          left: 20%;
+          bottom: 16%;
+        }
+        &::after {
+          content: "";
+          background-image: url("./icons/secondleg.svg");
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 19px;
+
+          bottom: 3%;
+          right: 30%;
+        }
+      }
+
+      /* Text Color/white */
+
+      background: #ffffff;
+      /* Primary Color 2 */
+
+      border: 2px solid #b57556;
+      box-shadow: 0px 1px 10px rgba(73, 72, 72, 0.25);
+      border-radius: 50px;
+    }
     form {
       width: 100%;
       height: 100%;

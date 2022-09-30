@@ -42,6 +42,12 @@ const Lottery = () => {
   return (
     <div className="lottery">
       <div id="lotteryform" className="form">
+        <div className="formtag">
+          <p>FORM</p>
+          <div className="turtle">
+            <img src={require("./icons/turt11.png")} alt="turt" />
+          </div>
+        </div>
         <form action="" id="myForm" onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="store">store</label>
           <input

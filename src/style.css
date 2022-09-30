@@ -23,6 +23,169 @@ body .header #wave2 {
   top: 35px;
   position: absolute;
 }
+body .header .turtle {
+  position: absolute;
+  -webkit-animation-name: turtle;
+          animation-name: turtle;
+  -webkit-animation-duration: 24s;
+          animation-duration: 24s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+@-webkit-keyframes turtle {
+  0% {
+    right: 0;
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  70% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    right: 100%;
+    transform: rotate(-20deg);
+  }
+}
+@keyframes turtle {
+  0% {
+    right: 0;
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  70% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(-20deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    right: 100%;
+    transform: rotate(-20deg);
+  }
+}
+body .header .turtle::before {
+  content: "";
+  background-image: url("./icons/firstleg.svg");
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 25px;
+  left: 20%;
+  bottom: 16%;
+  -webkit-animation-name: firstleg;
+          animation-name: firstleg;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+@-webkit-keyframes firstleg {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes firstleg {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+body .header .turtle::after {
+  content: "";
+  background-image: url("./icons/secondleg.svg");
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 19px;
+  bottom: 3%;
+  right: 30%;
+  -webkit-animation-name: secondleg;
+          animation-name: secondleg;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+@-webkit-keyframes secondleg {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes secondleg {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
 body .header .txtandbtn {
   color: white;
   letter-spacing: 0.2em;
@@ -94,30 +257,147 @@ body .header .content .bubblesup::before {
   right: -3px;
   bottom: 14px;
 }
+body .header .content .bubblesup::before {
+  -webkit-animation-name: fin;
+          animation-name: fin;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+@-webkit-keyframes fin {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fin {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+body .header .content .bubblesup {
+  -webkit-animation-name: bubblesup;
+          animation-name: bubblesup;
+  -webkit-animation-duration: 24s;
+          animation-duration: 24s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+@-webkit-keyframes bubblesup {
+  0% {
+    right: -3%;
+  }
+  35% {
+    right: 85%;
+    transform: rotate(0deg);
+  }
+  50% {
+    right: 95%;
+    transform: rotate(180deg);
+  }
+  85% {
+    transform: rotate(180deg);
+  }
+  100% {
+    right: -3%;
+  }
+}
+@keyframes bubblesup {
+  0% {
+    right: -3%;
+  }
+  35% {
+    right: 85%;
+    transform: rotate(0deg);
+  }
+  50% {
+    right: 95%;
+    transform: rotate(180deg);
+  }
+  85% {
+    transform: rotate(180deg);
+  }
+  100% {
+    right: -3%;
+  }
+}
 body .header .content .bubblesup .bubble {
   position: absolute;
-  top: 0%;
   right: 45%;
 }
 body .header .content .bubblesup .bubble::before {
-  content: "";
-  background-image: url("./icons/lbubble.svg");
-  display: block;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: -30px;
-  right: -10px;
-}
-body .header .content .bubblesup .bubble::after {
   content: "";
   background-image: url("./icons/sbubble.svg");
   display: block;
   position: absolute;
   width: 12px;
   height: 12px;
+  top: -30px;
+  right: 3px;
+}
+body .header .content .bubblesup .bubble::after {
+  content: "";
+  background-image: url("./icons/lbubble.svg");
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
   top: -50px;
   right: -15px;
+}
+body .header .content .bubblesup .bubble {
+  -webkit-animation-name: bubble;
+          animation-name: bubble;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+@-webkit-keyframes bubble {
+  0% {
+    transform: scale(0%);
+    top: 0%;
+  }
+  50% {
+    top: -25%;
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(100%);
+  }
+  100% {
+    opacity: 0;
+    top: -75%;
+  }
+}
+@keyframes bubble {
+  0% {
+    transform: scale(0%);
+    top: 0%;
+  }
+  50% {
+    top: -25%;
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(100%);
+  }
+  100% {
+    opacity: 0;
+    top: -75%;
+  }
 }
 body .header .content .firesup {
   position: absolute;
@@ -133,6 +413,48 @@ body .header .content .firesup::before {
   position: absolute;
   bottom: -45px;
   left: -35px;
+  -webkit-animation-name: fire;
+          animation-name: fire;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+@-webkit-keyframes fire {
+  0% {
+    transform: scale(10%);
+    bottom: 0px;
+  }
+  50% {
+    bottom: 100px;
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(200%);
+  }
+  100% {
+    opacity: 0;
+    bottom: 100px;
+  }
+}
+@keyframes fire {
+  0% {
+    transform: scale(10%);
+    bottom: 0px;
+  }
+  50% {
+    bottom: 100px;
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(200%);
+  }
+  100% {
+    opacity: 0;
+    bottom: 100px;
+  }
 }
 body .header .content .firesup::after {
   content: "";
@@ -227,6 +549,57 @@ body .header-food img {
   box-shadow: 0px 1px 20px rgba(73, 72, 72, 0.25);
   border-radius: 16px;
   margin: auto;
+  position: relative;
+}
+.lottery .form .formtag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+  position: absolute;
+  width: 123px;
+  height: 43px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -4%;
+  color: #b57556;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 125%;
+  /* Text Color/white */
+  background: #ffffff;
+  /* Primary Color 2 */
+  border: 2px solid #b57556;
+  box-shadow: 0px 1px 10px rgba(73, 72, 72, 0.25);
+  border-radius: 50px;
+}
+.lottery .form .formtag .turtle {
+  position: absolute;
+  right: -35%;
+  top: -45%;
+}
+.lottery .form .formtag .turtle::before {
+  content: "";
+  background-image: url("./icons/firstleg.svg");
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 25px;
+  left: 20%;
+  bottom: 16%;
+}
+.lottery .form .formtag .turtle::after {
+  content: "";
+  background-image: url("./icons/secondleg.svg");
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 19px;
+  bottom: 3%;
+  right: 30%;
 }
 .lottery .form form {
   width: 100%;
