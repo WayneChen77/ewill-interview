@@ -53,10 +53,7 @@ const Header = () => {
           <div className="firesup" />
         </div>
       </div>
-      <div className="header-food">
-        {/* <img src={require("./icons/wavess.png")} alt="" /> */}
-        {/* <img src={require("./icons/waves.png")} alt="" /> */}
-      </div>
+      <div className="header-food"></div>
     </div>
   );
 };
