@@ -557,7 +557,15 @@
   }
 }
 
-@media (max-width: 1921px) and (min-width: 1900px) {
+@media (max-width: 1921px) and (min-height: 1070px) {
+  .header-food {
+    min-height: 8vh !important;
+  }
+  .header .header-food::after {
+    height: 128%;
+  }
+}
+@media (max-width: 1921px) and (min-height: 1190px) {
   .header-food {
     min-height: 8vh !important;
   }
@@ -566,13 +574,15 @@
   }
 }
 
-@media (max-width: 414px) and (max-height: 888px) {
+//for iphone 414w
+@media (max-width: 415px) and (max-height: 897px) {
   .header .content {
     width: 88%;
   }
   .header .header-food::after {
     height: 123%;
   }
+
   // @keyframes bubblesup {
   //   0% {
   //     right: -3%;
