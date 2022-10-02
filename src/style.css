@@ -876,24 +876,24 @@
 }
 @-webkit-keyframes submit {
   0% {
-    -webkit-transform: scale(100%);
+    transform: scale(100%);
   }
   50% {
-    -webkit-transform: scale(120%);
+    transform: scale(120%);
   }
   100% {
-    -webkit-transform: scale(100%);
+    transform: scale(100%);
   }
 }
 @keyframes submit {
   0% {
-    -webkit-transform: scale(100%);
+    transform: scale(100%);
   }
   50% {
-    -webkit-transform: scale(120%);
+    transform: scale(120%);
   }
   100% {
-    -webkit-transform: scale(100%);
+    transform: scale(100%);
   }
 }
 .lottery .submit .success {
@@ -979,6 +979,27 @@ input[type=number] {
   }
   label::after {
     display: none;
+  }
+  .lottery .submit {
+    -webkit-animation-name: submit;
+            animation-name: submit;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+  }
+  @-webkit-keyframes submit {
+    0% {
+      width: 200px;
+    }
+    50% {
+      width: 240px;
+    }
+    100% {
+      width: 200px;
+    }
   }
 }
 .Gift {
