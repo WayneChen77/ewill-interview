@@ -14,7 +14,8 @@ const Lottery = () => {
     //if(失敗){setBtnCss("failure");}
   };
   const { name, store, amount, phone, pament } = errors;
-
+  const [btncss, setBtnCss] = useState("submit");
+  const [btntxt, setBtnTxt] = useState("submit");
   useEffect(() => {
     if (name || store || amount || phone || pament) {
       setBtnCss("disabled");
@@ -32,7 +33,7 @@ const Lottery = () => {
     if (!name & !store & !amount & !phone & !pament & (btncss !== "success")) {
       setBtnCss("submit");
     }
-  }, [name, store, amount, phone, pament, onSubmit]);
+  }, [name, store, amount, phone, pament, btncss]);
 
   const contBtnCss = {
     submit: "submit",
@@ -40,10 +41,6 @@ const Lottery = () => {
     success: "submit  setsubmit",
     failure: "submit  setfailure",
   };
-
-  const [btncss, setBtnCss] = useState("submit");
-  const [btntxt, setBtnTxt] = useState("submit");
-  //控制no result顯示
 
   return (
     <div className="lottery">
@@ -75,6 +72,7 @@ const Lottery = () => {
                 return false;
               },
             })}
+            style={{ borderColor: errors.store && "red" }}
           />
           {errors.store?.type === "validate" && (
             <span role="alert" className="errormsg">
@@ -103,6 +101,7 @@ const Lottery = () => {
               required: true,
               pattern: /^[\u4E00-\u9FA5A-Za-z]/,
             })}
+            style={{ borderColor: errors.name && "red" }}
           />
           {errors.name?.type === "pattern" && (
             <span role="alert" className="errormsg">
@@ -123,6 +122,7 @@ const Lottery = () => {
               required: true,
               pattern: /09\d{2}(\d{6}|-\d{3}-\d{3})/,
             })}
+            style={{ borderColor: errors.phone && "red" }}
           />
           {/* 09\d{2}(\d{6}|-\d{3}-\d{3}) */}
           {errors.phone?.type === "pattern" && (
@@ -146,6 +146,7 @@ const Lottery = () => {
             placeholder="Amount"
             type="number"
             inputMode="numeric"
+            style={{ borderColor: errors.amount && "red" }}
           />
           {errors.amount?.type === "min" && (
             <span role="alert" className="errormsg">
@@ -168,6 +169,7 @@ const Lottery = () => {
             {...register("pament", {
               required: true,
             })}
+            style={{ borderColor: errors.pament && "red" }}
           >
             <option value=""></option>
 
