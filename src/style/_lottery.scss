@@ -267,14 +267,13 @@ input[type="number"] {
     animation-direction: normal;
     @-webkit-keyframes submit {
       0% {
-        transform: scale(100%);
-        background-color: #ffe3e3 !important;
+        -webkit-transform: scale(100%);
       }
       50% {
-        transform: scale(200%);
+        -webkit-transform: scale(200%);
       }
       100% {
-        transform: scale(100%);
+        -webkit-transform: scale(100%);
       }
     }
   }
