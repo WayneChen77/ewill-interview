@@ -599,14 +599,9 @@
     }
     35% {
       right: 80%;
-      transform: rotate(0deg);
     }
     50% {
       right: 85%;
-      transform: rotate(180deg);
-    }
-    85% {
-      transform: rotate(180deg);
     }
     100% {
       right: -3%;
@@ -618,14 +613,9 @@
     }
     35% {
       right: 80%;
-      transform: rotate(0deg);
     }
     50% {
       right: 85%;
-      transform: rotate(180deg);
-    }
-    85% {
-      transform: rotate(180deg);
     }
     100% {
       right: -3%;
