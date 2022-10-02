@@ -4,9 +4,10 @@ import { useForm } from "react-hook-form";
 const Lottery = () => {
   const {
     register,
-    formState: { errors },
+
+    formState: { errors, isSubmitting },
     handleSubmit,
-  } = useForm();
+  } = useForm({ mode: "onBlur" });
   const onSubmit = () => {
     //尚無判斷是否成功要求暫定成功
     setBtnCss("success");
@@ -19,13 +20,17 @@ const Lottery = () => {
       setBtnCss("disabled");
     } else if (btncss === "success") {
       setBtnTxt("success");
-    } else if (btncss === "failure") {
-      setBtnTxt("failure");
+      // } else if (btncss === "failure") {
+      //   setBtnTxt("failure");
     } else if (btncss === "disabled") {
       const a = () => {
         setBtnTxt("submit");
       };
+
       a();
+    }
+    if (!name & !store & !amount & !phone & !pament & (btncss !== "success")) {
+      setBtnCss("submit");
     }
   }, [name, store, amount, phone, pament, onSubmit]);
 
@@ -43,7 +48,7 @@ const Lottery = () => {
     <div className="lottery">
       <div id="lotteryform" className="form">
         <div className="formtag">
-          <p>FORM</p>
+          <p>FORM </p>
           <div className="turtle">
             <img src={require("./icons/turt11.png")} alt="turt" />
           </div>
@@ -70,8 +75,16 @@ const Lottery = () => {
               },
             })}
           />
-          {errors.store?.type === "validate" && <p role="alert">no result</p>}
-          {errors.store?.type === "required" && <p role="alert">required</p>}
+          {errors.store?.type === "validate" && (
+            <span role="alert" className="errormsg">
+              no&nbsp;result
+            </span>
+          )}
+          {errors.store?.type === "required" && (
+            <span role="alert" className="errormsg">
+              required
+            </span>
+          )}
           <datalist id="stores">
             <option value="store1" />
             <option value="store2" />
@@ -87,8 +100,16 @@ const Lottery = () => {
               pattern: /^[\u4E00-\u9FA5A-Za-z]/,
             })}
           />
-          {errors.name?.type === "pattern" && <p role="alert">wrong format</p>}
-          {errors.store?.type === "required" && <p role="alert">required</p>}
+          {errors.name?.type === "pattern" && (
+            <span role="alert" className="errormsg">
+              wrong format
+            </span>
+          )}
+          {errors.name?.type === "required" && (
+            <span role="alert" className="errormsg">
+              required
+            </span>
+          )}
           <label htmlFor="phone">phone</label>
           <input
             placeholder="123-4567-8901"
@@ -96,11 +117,20 @@ const Lottery = () => {
             type="tel"
             {...register("phone", {
               required: true,
-              pattern: /09\d{2}\d{3}\d{3}/,
+              pattern: /09\d{2}(\d{6}|-\d{3}-\d{3})/,
             })}
           />
-          {errors.phone?.type === "pattern" && <p role="alert">wrong format</p>}
-          {errors.phone?.type === "required" && <p role="alert">required</p>}
+          {/* 09\d{2}(\d{6}|-\d{3}-\d{3}) */}
+          {errors.phone?.type === "pattern" && (
+            <span role="alert" className="errormsg">
+              wrong format
+            </span>
+          )}
+          {errors.phone?.type === "required" && (
+            <span role="alert" className="errormsg">
+              required
+            </span>
+          )}
           <label htmlFor="amount">Amount&nbsp;of&nbsp;consunption</label>
           <input
             id="amount"
@@ -109,12 +139,24 @@ const Lottery = () => {
               min: 0,
               pattern: /\d/,
             })}
+            placeholder="Amount"
+            type="number"
           />
-          {errors.amount?.type === "min" && <p role="alert">wrong format</p>}
-          {errors.amount?.type === "pattern" && (
-            <p role="alert">wrong format</p>
+          {errors.amount?.type === "min" && (
+            <span role="alert" className="errormsg">
+              wrong format
+            </span>
           )}
-          {errors.amount?.type === "required" && <p role="alert">required</p>}
+          {errors.amount?.type === "pattern" && (
+            <span role="alert" className="errormsg">
+              wrong format
+            </span>
+          )}
+          {errors.amount?.type === "required" && (
+            <span role="alert" className="errormsg">
+              required
+            </span>
+          )}
           <label htmlFor="payment">payment</label>
           <select
             id="pament"
@@ -123,23 +165,33 @@ const Lottery = () => {
             })}
           >
             <option value=""></option>
+
             <option value="digital payment">digital payment</option>
             <option value="ATM">ATM</option>
           </select>
-          {errors.pament?.type === "required" && <p role="alert">required</p>}
+          {errors.pament?.type === "required" && (
+            <span role="alert" className="errormsg">
+              required
+            </span>
+          )}
           {/* <input id="pament" type="select" /> */}
         </form>
       </div>
-      <button type="submit" form="myForm" className={contBtnCss[btncss]}>
+      <button
+        type="submit"
+        form="myForm"
+        disabled={isSubmitting}
+        className={contBtnCss[btncss]}
+      >
         <img className="success" src={require("./icons/Vector.png")} alt="" />
         <img className="failure" src={require("./icons/VectorX.png")} alt="" />
         {btntxt}
       </button>
       {btncss === "success" && (
-        <p className="successmsg">This person does exist</p>
+        <p className="successmsg">This person does exist </p>
       )}
       {btncss === "failure" && (
-        <p className="failuremsg">This person does not exist</p>
+        <p className="failuremsg">This person does not exist </p>
       )}
     </div>
   );

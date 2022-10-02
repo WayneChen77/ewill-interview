@@ -1,0 +1,246 @@
+.lottery {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px 58px;
+  gap: 40px;
+  background: rgba(226, 217, 211, 1);
+  height: 813px;
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+
+    //adj
+
+    width: 57%;
+    // height: 575px;
+    background: #ffffff;
+    border: 2px solid #b57556;
+    box-shadow: 0px 1px 20px rgba(73, 72, 72, 0.25);
+    border-radius: 16px;
+    margin: auto;
+    position: relative;
+    .formtag {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      gap: 20px;
+      position: absolute;
+      width: 123px;
+      height: 43px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -4%;
+      color: #b57556;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 125%;
+      .turtle {
+        position: absolute;
+        right: -35%;
+        top: -45%;
+        &::before {
+          content: "";
+          background-image: url("./icons/firstleg.svg");
+          display: block;
+          position: absolute;
+          width: 12px;
+          height: 25px;
+          left: 20%;
+          bottom: 16%;
+        }
+        &::after {
+          content: "";
+          background-image: url("./icons/secondleg.svg");
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 19px;
+
+          bottom: 3%;
+          right: 30%;
+        }
+      }
+
+      /* Text Color/white */
+
+      background: #ffffff;
+      /* Primary Color 2 */
+
+      border: 2px solid #b57556;
+      box-shadow: 0px 1px 10px rgba(73, 72, 72, 0.25);
+      border-radius: 50px;
+    }
+    form {
+      width: 100%;
+      height: 100%;
+      label {
+        display: block;
+        width: 38px;
+        height: 22px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #204379;
+        position: relative;
+        &::after {
+          content: "*";
+          color: red;
+          position: absolute;
+          margin-left: 4px;
+          top: -3px;
+        }
+      }
+      input,
+      select {
+        width: 95%;
+        background: #ffffff;
+        border: 1px solid #204379;
+        border-radius: 20px;
+        height: 10%;
+        padding: 12px;
+        margin: 0.5rem 0 1rem 0;
+      }
+    }
+  }
+  .submit {
+    // adj
+    width: 200px;
+    min-height: 57px;
+    background: #b57556;
+    box-shadow: 0px 4px 10px rgba(40, 35, 35, 0.35),
+      0px -4px 10px rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    line-height: 125%;
+    color: white;
+    & {
+      animation-name: submit;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      @keyframes submit {
+        0% {
+          transform: scale(100%);
+        }
+        50% {
+          transform: scale(120%);
+        }
+        100% {
+          transform: scale(100%);
+        }
+      }
+    }
+    &:active {
+      animation-name: submit;
+      animation-duration: 4s;
+      animation-iteration-count: none;
+      animation-direction: normal;
+      @keyframes submit {
+        0% {
+          transform: scale(100%);
+        }
+        50% {
+          transform: scale(120%);
+        }
+        100% {
+          transform: scale(100%);
+        }
+      }
+    }
+
+    .success {
+      display: none;
+      vertical-align: bottom;
+      transform: translateX(-50%);
+      color: #e6ffb1;
+    }
+    .failure {
+      display: none;
+      vertical-align: bottom;
+      color: #ffe3e3;
+      transform: rotate(-45deg);
+      transform: translateX(-150%);
+    }
+  }
+  .setsubmit {
+    color: #e6ffb1;
+    .success {
+      display: inline;
+    }
+  }
+  .setfailure {
+    color: #ffe3e3;
+    .failure {
+      display: inline;
+    }
+  }
+  .failuremsg {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #e06d6d;
+  }
+  .successmsg {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #7886dc;
+  }
+  .succes {
+    &:active {
+      border: 3px solid #74584a;
+    }
+  }
+  .disabled {
+    opacity: 0.7;
+  }
+}
+
+//for errorsmsg
+.lottery {
+  .errormsg {
+    background-color: yellow;
+    position: relative;
+    top: -16px;
+    left: 5px;
+    border-radius: 10%;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 450px) {
+  #lotteryform {
+    margin: auto 0px;
+  }
+  .lottery .form {
+    width: 100%;
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,57 @@
+.lottery2 {
+  width: 100%;
+  background: rgba(226, 217, 211, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  gap: 24px;
+
+  .lottety2item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    position: relative;
+    width: 274px;
+    height: 298px;
+    .left {
+      position: absolute;
+      width: 20px;
+      height: 75px;
+      left: 0px;
+      top: 4px;
+
+      /* Primary Color 1 */
+
+      // border: 1px solid #204379;
+    }
+    .right {
+      position: absolute;
+      width: 20px;
+      height: 75px;
+      left: 254px;
+      top: 4px;
+
+      /* Primary Color 1 */
+
+      // border: 1px solid #204379;
+      // transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+    .lottery2txt {
+      width: 216px;
+      height: 84px;
+      left: 28.98px;
+      top: 0px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+      text-align: center;
+      color: rgba(32, 67, 121, 1);
+      p:first-child {
+        color: #b57556;
+      }
+    }
+  }
+}
