@@ -672,6 +672,33 @@
   .header .header-food::after {
     height: 123%;
   }
+  .header-food::after {
+    content: "";
+    background-image: url("./icons/waves.png");
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    bottom: 0%;
+    transition: all 0.3s ease-in-out;
+    -webkit-animation: waves 20s linear infinite;
+            animation: waves 20s linear infinite;
+  }
+  @-webkit-keyframes waves {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+  @keyframes waves {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
 }
 .lottery {
   position: relative;
