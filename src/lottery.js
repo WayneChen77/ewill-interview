@@ -52,7 +52,9 @@ const Lottery = () => {
           </div>
         </div>
         <form action="" id="myForm" onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="store">store</label>
+          <label htmlFor="store">
+            store<span>*</span>
+          </label>
           <input
             placeholder="store"
             list="stores"
@@ -92,7 +94,9 @@ const Lottery = () => {
             <option defaultValue="123" />
             {errors.store?.type === "validate" && <option value="no result" />}
           </datalist>
-          <label htmlFor="name">name</label>
+          <label htmlFor="name">
+            name<span>*</span>
+          </label>
           <input
             placeholder="Your Name"
             id="name"
@@ -113,7 +117,10 @@ const Lottery = () => {
               required
             </span>
           )}
-          <label htmlFor="phone">phone</label>
+          <label htmlFor="phone">
+            phone<span>*</span>
+          </label>
+
           <input
             placeholder="0900-000-000"
             id="phone"
@@ -135,7 +142,9 @@ const Lottery = () => {
               required
             </span>
           )}
-          <label htmlFor="amount">Amount&nbsp;of&nbsp;consunption</label>
+          <label htmlFor="amount">
+            Amount&nbsp;of&nbsp;consunption<span>*</span>
+          </label>
           <input
             id="amount"
             {...register("amount", {
@@ -163,7 +172,9 @@ const Lottery = () => {
               required
             </span>
           )}
-          <label htmlFor="payment">payment</label>
+          <label htmlFor="payment">
+            payment<span>*</span>
+          </label>
           <select
             id="pament"
             {...register("pament", {

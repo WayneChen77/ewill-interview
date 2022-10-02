@@ -762,6 +762,9 @@
   margin-left: 4px;
   top: -3px;
 }
+.lottery .form form label span {
+  display: none;
+}
 .lottery .form form input,
 .lottery .form form select {
   width: 95%;
@@ -893,6 +896,16 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+@media (max-width: 450px) {
+  label span {
+    display: inline !important;
+    color: red;
+    margin-right: 0px;
+  }
+  label::after {
+    display: none;
+  }
+}
 .Gift {
   background: rgb(226, 217, 211);
   background-image: url("./icons/sand.png");
