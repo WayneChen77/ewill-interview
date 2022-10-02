@@ -127,6 +127,7 @@
     letter-spacing: 0.2em;
     line-height: 125%;
     color: white;
+    cursor: pointer;
     & {
       animation-name: submit;
       animation-duration: 4s;
@@ -144,23 +145,23 @@
         }
       }
     }
-    &:active {
-      animation-name: submit;
-      animation-duration: 4s;
-      animation-iteration-count: none;
-      animation-direction: normal;
-      @keyframes submit {
-        0% {
-          transform: scale(100%);
-        }
-        50% {
-          transform: scale(120%);
-        }
-        100% {
-          transform: scale(100%);
-        }
-      }
-    }
+    // &:active {
+    //   animation-name: submit;
+    //   animation-duration: 4s;
+    //   animation-iteration-count: none;
+    //   animation-direction: normal;
+    //   @keyframes submit {
+    //     0% {
+    //       transform: scale(100%);
+    //     }
+    //     50% {
+    //       transform: scale(120%);
+    //     }
+    //     100% {
+    //       transform: scale(100%);
+    //     }
+    //   }
+    // }
 
     .success {
       display: none;

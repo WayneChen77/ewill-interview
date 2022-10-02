@@ -113,6 +113,9 @@
           margin: 0 10%;
           a {
             width: 35%;
+            &:hover {
+              transform: scale(1.1);
+            }
           }
         }
         img {

@@ -29,10 +29,12 @@ const Header = () => {
           </ol>
         </div>
         <div className="con2 con">
+          {/* <div className="bubble2">11</div> */}
           <div className="bubblesup">
             <div className="bubble" />
             <img src={require("./icons/sup.png")} alt="sup" />
           </div>
+
           <h3>parapraph</h3>
           <ol>
             <li>

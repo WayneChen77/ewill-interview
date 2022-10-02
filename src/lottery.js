@@ -43,6 +43,7 @@ const Lottery = () => {
 
   const [btncss, setBtnCss] = useState("submit");
   const [btntxt, setBtnTxt] = useState("submit");
+  //控制no result顯示
 
   return (
     <div className="lottery">
@@ -85,10 +86,13 @@ const Lottery = () => {
               required
             </span>
           )}
-          <datalist id="stores">
+
+          <datalist id="stores" defaultValue={"123"}>
             <option value="store1" />
             <option value="store2" />
             <option value="store3" />
+            <option defaultValue="123" />
+            {errors.store?.type === "validate" && <option value="no result" />}
           </datalist>
           <label htmlFor="name">name</label>
           <input
@@ -112,7 +116,7 @@ const Lottery = () => {
           )}
           <label htmlFor="phone">phone</label>
           <input
-            placeholder="123-4567-8901"
+            placeholder="0900-000-000"
             id="phone"
             type="tel"
             {...register("phone", {
@@ -141,6 +145,7 @@ const Lottery = () => {
             })}
             placeholder="Amount"
             type="number"
+            inputMode="numeric"
           />
           {errors.amount?.type === "min" && (
             <span role="alert" className="errormsg">

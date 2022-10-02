@@ -218,6 +218,7 @@
   border: none;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 .header .txtandbtn .btn.btn:after {
   content: "";
@@ -235,8 +236,8 @@
   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: auto;
   background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: 100%;
+  height: 100%;
   border-radius: 50px;
   filter: blur(5px);
   position: absolute;
@@ -346,14 +347,9 @@
   }
   35% {
     right: 85%;
-    transform: rotate(0deg);
   }
   50% {
     right: 95%;
-    transform: rotate(180deg);
-  }
-  85% {
-    transform: rotate(180deg);
   }
   100% {
     right: -3%;
@@ -365,14 +361,9 @@
   }
   35% {
     right: 85%;
-    transform: rotate(0deg);
   }
   50% {
     right: 95%;
-    transform: rotate(180deg);
-  }
-  85% {
-    transform: rotate(180deg);
   }
   100% {
     right: -3%;
@@ -641,52 +632,6 @@
     }
   }
 }
-@media (max-width: 450px) and (max-height: 888px) {
-  .header .content {
-    width: 88%;
-  }
-  .header .header-food::after {
-    height: 123%;
-  }
-  @-webkit-keyframes bubblesup {
-    0% {
-      right: -3%;
-    }
-    35% {
-      right: 80%;
-      transform: rotate(0deg);
-    }
-    50% {
-      right: 85%;
-      transform: rotate(180deg);
-    }
-    85% {
-      transform: rotate(180deg);
-    }
-    100% {
-      right: -3%;
-    }
-  }
-  @keyframes bubblesup {
-    0% {
-      right: -3%;
-    }
-    35% {
-      right: 80%;
-      transform: rotate(0deg);
-    }
-    50% {
-      right: 85%;
-      transform: rotate(180deg);
-    }
-    85% {
-      transform: rotate(180deg);
-    }
-    100% {
-      right: -3%;
-    }
-  }
-}
 @media (max-width: 950px) and (max-height: 500px) {
   .header .content {
     width: 88%;
@@ -695,7 +640,7 @@
     height: 256%;
   }
 }
-@media (max-width: 811px) and (max-height: 1081px) {
+@media (width: 810px) and (height: 1080px) {
   .header .content {
     width: 88%;
   }
@@ -703,7 +648,7 @@
     height: 100%;
   }
 }
-@media (max-width: 801px) and (max-height: 1281px) {
+@media (width: 800px) and (height: 1280px) {
   .header .content {
     width: 88%;
   }
@@ -719,7 +664,15 @@
     min-height: 8vh !important;
   }
   .header .header-food::after {
-    height: 105%;
+    height: 113%;
+  }
+}
+@media (max-width: 414px) and (max-height: 888px) {
+  .header .content {
+    width: 88%;
+  }
+  .header .header-food::after {
+    height: 123%;
   }
 }
 .lottery {
@@ -841,6 +794,7 @@
   letter-spacing: 0.2em;
   line-height: 125%;
   color: white;
+  cursor: pointer;
 }
 .lottery .submit {
   -webkit-animation-name: submit;
@@ -862,27 +816,6 @@
   100% {
     transform: scale(100%);
   }
-}
-@keyframes submit {
-  0% {
-    transform: scale(100%);
-  }
-  50% {
-    transform: scale(120%);
-  }
-  100% {
-    transform: scale(100%);
-  }
-}
-.lottery .submit:active {
-  -webkit-animation-name: submit;
-          animation-name: submit;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-iteration-count: none;
-          animation-iteration-count: none;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
 }
 @keyframes submit {
   0% {
@@ -1207,6 +1140,9 @@ input[type=number] {
 }
 .mall .mallhouse .mallcontent .malltxt .malllink a {
   width: 35%;
+}
+.mall .mallhouse .mallcontent .malltxt .malllink a:hover {
+  transform: scale(1.1);
 }
 .mall .mallhouse .mallcontent .malltxt img {
   transform: translateY(-16px);
