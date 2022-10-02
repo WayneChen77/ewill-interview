@@ -580,7 +580,7 @@
     width: 88%;
   }
   .header .header-food::after {
-    height: 123%;
+    height: 122%;
   }
 
   .header-food::after {
@@ -599,6 +599,28 @@
       100% {
         background-position: 400%;
       }
+    }
+  }
+
+  .bubble {
+    animation-name: bubble;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  @keyframes bubble {
+    0% {
+      top: 0%;
+    }
+    50% {
+      top: -25%;
+    }
+    75% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 0;
+      top: -75%;
     }
   }
 

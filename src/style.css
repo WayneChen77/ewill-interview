@@ -670,7 +670,7 @@
     width: 88%;
   }
   .header .header-food::after {
-    height: 123%;
+    height: 122%;
   }
   .header-food::after {
     content: "";
@@ -697,6 +697,46 @@
     }
     100% {
       background-position: 400%;
+    }
+  }
+  .bubble {
+    -webkit-animation-name: bubble;
+            animation-name: bubble;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+  }
+  @-webkit-keyframes bubble {
+    0% {
+      top: 0%;
+    }
+    50% {
+      top: -25%;
+    }
+    75% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 0;
+      top: -75%;
+    }
+  }
+  @keyframes bubble {
+    0% {
+      top: 0%;
+    }
+    50% {
+      top: -25%;
+    }
+    75% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 0;
+      top: -75%;
     }
   }
 }
