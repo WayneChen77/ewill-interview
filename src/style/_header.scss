@@ -455,7 +455,8 @@
 
     &::after {
       content: "";
-      background-image: url("./icons/waves.png");
+      background-image: url("./icons/wavesvg.svg");
+      background-repeat: repeat-x;
       width: calc(100%);
       height: calc(150%);
       position: absolute;
@@ -464,10 +465,10 @@
       animation: waves 20s linear infinite;
       @keyframes waves {
         0% {
-          background-position: 400%;
+          background-position: 0%;
         }
         100% {
-          background-position: 0%;
+          background-position: 400%;
         }
       }
     }
@@ -478,9 +479,7 @@
   .header .content {
     width: 88%;
   }
-  .header .header-food::after {
-    height: 118%;
-  }
+
   @keyframes bubblesup {
     0% {
       right: -3%;
@@ -532,45 +531,14 @@
   .header .content {
     width: 88%;
   }
-  .header .header-food::after {
-    height: 256%;
+  .header-food {
+    min-height: 20vh !important;
   }
 }
 
-@media (width: 810px) and (height: 1080px) {
-  .header .content {
-    width: 88%;
-  }
-  .header .header-food::after {
-    height: 100%;
-  }
-}
 @media (width: 800px) and (height: 1280px) {
   .header .content {
     width: 88%;
-  }
-  .header-food {
-    min-height: 8vh !important;
-  }
-  .header .header-food::after {
-    height: 105%;
-  }
-}
-
-@media (max-width: 1921px) and (min-height: 1070px) {
-  .header-food {
-    min-height: 8vh !important;
-  }
-  .header .header-food::after {
-    height: 128%;
-  }
-}
-@media (max-width: 1921px) and (min-height: 1190px) {
-  .header-food {
-    min-height: 8vh !important;
-  }
-  .header .header-food::after {
-    height: 113%;
   }
 }
 
@@ -579,28 +547,7 @@
   .header .content {
     width: 88%;
   }
-  .header .header-food::after {
-    height: 122%;
-  }
 
-  .header-food::after {
-    content: "";
-    background-image: url("./icons/waves.png");
-    width: calc(100%);
-    height: calc(150%);
-    position: absolute;
-    bottom: 0%;
-    transition: all 0.3s ease-in-out;
-    animation: waves 20s linear infinite;
-    @keyframes waves {
-      0% {
-        background-position: 0%;
-      }
-      100% {
-        background-position: 400%;
-      }
-    }
-  }
   ///放大webkit無效?
   .bubble {
     animation-name: bubble;

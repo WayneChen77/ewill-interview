@@ -560,7 +560,8 @@
 }
 .header .header-food::after {
   content: "";
-  background-image: url("./icons/waves.png");
+  background-image: url("./icons/wavesvg.svg");
+  background-repeat: repeat-x;
   width: 100%;
   height: 150%;
   position: absolute;
@@ -571,27 +572,24 @@
 }
 @-webkit-keyframes waves {
   0% {
-    background-position: 400%;
+    background-position: 0%;
   }
   100% {
-    background-position: 0%;
+    background-position: 400%;
   }
 }
 @keyframes waves {
   0% {
-    background-position: 400%;
+    background-position: 0%;
   }
   100% {
-    background-position: 0%;
+    background-position: 400%;
   }
 }
 
 @media (max-width: 450px) and (max-height: 950px) {
   .header .content {
     width: 88%;
-  }
-  .header .header-food::after {
-    height: 118%;
   }
   @-webkit-keyframes bubblesup {
     0% {
@@ -626,78 +624,18 @@
   .header .content {
     width: 88%;
   }
-  .header .header-food::after {
-    height: 256%;
-  }
-}
-@media (width: 810px) and (height: 1080px) {
-  .header .content {
-    width: 88%;
-  }
-  .header .header-food::after {
-    height: 100%;
+  .header-food {
+    min-height: 20vh !important;
   }
 }
 @media (width: 800px) and (height: 1280px) {
   .header .content {
     width: 88%;
   }
-  .header-food {
-    min-height: 8vh !important;
-  }
-  .header .header-food::after {
-    height: 105%;
-  }
-}
-@media (max-width: 1921px) and (min-height: 1070px) {
-  .header-food {
-    min-height: 8vh !important;
-  }
-  .header .header-food::after {
-    height: 128%;
-  }
-}
-@media (max-width: 1921px) and (min-height: 1190px) {
-  .header-food {
-    min-height: 8vh !important;
-  }
-  .header .header-food::after {
-    height: 113%;
-  }
 }
 @media (max-width: 415px) and (max-height: 897px) {
   .header .content {
     width: 88%;
-  }
-  .header .header-food::after {
-    height: 122%;
-  }
-  .header-food::after {
-    content: "";
-    background-image: url("./icons/waves.png");
-    width: 100%;
-    height: 150%;
-    position: absolute;
-    bottom: 0%;
-    transition: all 0.3s ease-in-out;
-    -webkit-animation: waves 20s linear infinite;
-            animation: waves 20s linear infinite;
-  }
-  @-webkit-keyframes waves {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 400%;
-    }
-  }
-  @keyframes waves {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 400%;
-    }
   }
   .bubble {
     -webkit-animation-name: bubble;
@@ -749,7 +687,6 @@
   padding: 40px 24px 58px;
   gap: 40px;
   background: rgb(226, 217, 211);
-  height: 813px;
 }
 .lottery .form {
   display: flex;
@@ -817,7 +754,7 @@
 }
 .lottery .form form {
   width: 100%;
-  height: 100%;
+  padding-bottom: 25px;
 }
 .lottery .form form label {
   display: block;
@@ -830,15 +767,10 @@
   color: #204379;
   position: relative;
 }
-.lottery .form form label::after {
-  content: "*";
+.lottery .form form label span {
   color: red;
   position: absolute;
   margin-left: 4px;
-  top: -3px;
-}
-.lottery .form form label span {
-  display: none;
 }
 .lottery .form form input,
 .lottery .form form select {
@@ -972,14 +904,6 @@ input[type=number] {
 }
 
 @media (max-width: 450px) {
-  label span {
-    display: inline !important;
-    color: red;
-    margin-right: 0px;
-  }
-  label::after {
-    display: none;
-  }
   .lottery .submit {
     -webkit-animation-name: submit;
             animation-name: submit;

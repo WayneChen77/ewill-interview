@@ -8,7 +8,7 @@
   padding: 40px 24px 58px;
   gap: 40px;
   background: rgba(226, 217, 211, 1);
-  height: 813px;
+
   .form {
     display: flex;
     flex-direction: column;
@@ -82,7 +82,8 @@
     }
     form {
       width: 100%;
-      height: 100%;
+      padding-bottom: 25px;
+
       label {
         display: block;
         width: 38px;
@@ -93,15 +94,17 @@
         line-height: 140%;
         color: #204379;
         position: relative;
-        &::after {
-          content: "*";
+        // &::after {
+        //   content: "*";
+        //   color: red;
+        //   position: absolute;
+        //   margin-left: 4px;
+        //   top: -3px;
+        // }
+        span {
           color: red;
           position: absolute;
           margin-left: 4px;
-          top: -3px;
-        }
-        span {
-          display: none;
         }
       }
       input,
@@ -251,16 +254,16 @@ input[type="number"] {
 }
 //for iphone
 @media (max-width: 450px) {
-  label {
-    span {
-      display: inline !important;
-      color: red;
-      margin-right: 0px;
-    }
-    &::after {
-      display: none;
-    }
-  }
+  // label {
+  //   span {
+  //     display: inline !important;
+  //     color: red;
+  //     margin-right: 0px;
+  //   }
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
   ///放大webkit無效?
   .lottery .submit {
     animation-name: submit;
