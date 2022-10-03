@@ -754,7 +754,7 @@
 }
 .lottery .form form {
   width: 100%;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 .lottery .form form label {
   display: block;
@@ -884,11 +884,17 @@
 }
 
 @media (max-width: 450px) {
+  .lottery {
+    margin-top: -3px;
+  }
   #lotteryform {
     margin: auto 0px;
   }
   .lottery .form {
     width: 100%;
+  }
+  #myform label span {
+    display: none !important;
   }
 }
 /* Chrome, Safari, Edge, Opera */
